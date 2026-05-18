@@ -1,4 +1,4 @@
-This is my journey in learning JavaScript
+This is my journey in learning Front-End Development (Utilizing HTML, CSS, and JS)
 
 Stage 1: Shopping List -> Learn fundamentals of Web Development (click ShoppingList.html to open)
 
