@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treasury Transaction</title>
+    <link rel="stylesheet" href="TreasuryTransaction.css">
+    <script src="TreasuryData.js" defer></script>
+    <script src="TreasuryTransaction.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Transactions</h1>
+    </div>
+    <div class="controls">
+        <div class="search">
+            <input type="text" placeholder="Try Looking Here..." id="input">
+            <select id="search-method">
+                <option value="lin-src">Linear</option>
+                <option value="bin-src">Binary</option>
+            </select>
+            <button id="search-btn">Search</button>
+        </div>
+        <div class="sort">
+            <select id="sort-base">
+                <option value="amount">Amount</option>
+                <option value="date">Date</option>
+                <option value="customer">Customer</option>
+            </select>
+            <select id="sort-method">
+                <option value="bub-sort">Simple</option>
+                <option value="mrg-sort">Efficient</option>
+            </select>
+            <button id="sort-btn">Sort</button>
+        </div>
+    </div>
+    <table id="posts">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Customer</th>
+                <th>Amount</th>
+                <th>Date</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody id="treasury-data"></tbody>
+    </table>
+    <div class="paging">
+        <button id="prev-page">Previous</button>
+        <span id="page-info"></span>
+        <button id="next-page">Next</button>
+    </div>
+    <div id="modal" class="modal-overlay" aria-hidden="true"></div>
+</body>
+</html>
